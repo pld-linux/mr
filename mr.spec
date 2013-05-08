@@ -27,9 +27,9 @@ vcsh, fossil and veracity repositories.
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_bindir}
-#install -d $RPM_BUILD_ROOT%{_mandir}/man1
+install -d $RPM_BUILD_ROOT%{_mandir}/man1/
 cp -p mr $RPM_BUILD_ROOT%{_bindir}
-#cp -p mr.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+cp -p mr.1 $RPM_BUILD_ROOT%{_mandir}/man1/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -37,5 +37,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-#%doc %{_mandir}/man1/%{name}.1
 %attr(755,root,root) %{_bindir}/%{name}
+%{_mandir}/man1/%{name}.*
