@@ -1,4 +1,3 @@
-######		/home/users/caleb/rpm/packages/../rpm-build-tools/rpm.groups: no such file
 Summary:	Command line tool for managing multiple repositories
 Name:		mr
 Version:	1.15
