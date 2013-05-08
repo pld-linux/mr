@@ -2,7 +2,7 @@ Summary:	Command line tool for managing multiple repositories
 Name:		mr
 Version:	1.15
 Release:	0.1
-License:	GPL/GPL v2/GPL
+License:	GPL/GPL v2
 Group:		Applications/Console
 Source0:	ftp://ftp.debian.org/debian/pool/main/m/mr/%{name}_%{version}.tar.gz
 # Source0-md5:	719ec056d7b9e2e5c9501d4f1ba19122
@@ -24,11 +24,9 @@ vcsh, fossil and veracity repositories.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_mandir}/man1/
-cp -p mr $RPM_BUILD_ROOT%{_bindir}
-cp -p mr.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+install -p mr $RPM_BUILD_ROOT%{_bindir}
+cp -p mr.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -37,4 +35,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/%{name}
-%{_mandir}/man1/%{name}.*
+%{_mandir}/man1/%{name}.1*
