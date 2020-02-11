@@ -4,7 +4,7 @@ Version:	1.15
 Release:	0.1
 License:	GPL/GPL v2
 Group:		Applications/Console
-Source0:	ftp://ftp.debian.org/debian/pool/main/m/mr/%{name}_%{version}.tar.gz
+Source0:	http://ftp.debian.org/debian/pool/main/m/mr/%{name}_%{version}.tar.gz
 # Source0-md5:	719ec056d7b9e2e5c9501d4f1ba19122
 URL:		http://joeyh.name/code/mr/
 Requires:	git-core
